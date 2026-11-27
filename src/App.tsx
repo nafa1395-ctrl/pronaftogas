@@ -1917,8 +1917,8 @@ export default function App() {
       ) : viewMode === 'brochure' ? (
         <main className="flex-1 py-10 px-4 sm:px-6 lg:px-10">
           <div className="no-print no-print-admin-ignore max-w-[850px] mx-auto mb-8 bg-white border border-slate-200 rounded-2xl p-5 space-y-4 shadow-sm">
-            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
-              <div className="space-y-1">
+            <div className="flex flex-col gap-4">
+              <div className="space-y-1.5">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="px-2.5 py-0.5 rounded-md bg-sky-100 text-[#0284C7] text-xs font-black">
                     {(() => {
@@ -1962,7 +1962,7 @@ export default function App() {
                   در فایل‌های خروجی (PDF و پاورپوینت)، کد QR روی جلد و تمامی لینک‌های ارتباطی به‌صورت مستقیم فعال هستند.
                 </p>
               </div>
-              <div className="flex flex-wrap items-center gap-2 shrink-0">
+              <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-slate-100">
                 <button
                   type="button"
                   onClick={handlePrint}
