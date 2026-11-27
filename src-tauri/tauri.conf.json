@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Owj-Khatam-CPMAI",
+  "version": "1.0.0",
+  "identifier": "com.owjbc.khatam.cpmai",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:3000",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "سامانه جامع پروپوزال‌های CPMAI قرارگاه خاتم‌الانبیا (ص) — مشاوران مدیریت اوج",
+        "width": 1440,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 680,
+        "center": true,
+        "maximized": true,
+        "resizable": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "publisher": "Owj Business Management Consultants",
+    "category": "Business",
+    "shortDescription": "Khatam al-Anbiya CPMAI AI Bootcamp Proposal Suite by Owj Consultants",
+    "longDescription": "Offline desktop edition of the 9-Holding Khatam al-Anbiya CPMAI v8 Proposal Suite and Damavand Protocol by Owj Business Management Consultants, including Circular Hub, Rotary Dial, Spotlight Focus, Admin Editor, Vector PDF and PowerPoint exports.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "embedBootstrapper"
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["English"],
+        "displayLanguageSelector": false
+      }
+    }
+  }
+}
