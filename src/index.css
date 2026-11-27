@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'B Nazanin';
+  src: url('./assets/fonts/BNazaninBold.ttf') format('truetype'),
+       url('./assets/fonts/BNazaninBold.woff') format('woff'),
+       local('B Nazanin Bold'), local('BNazaninBd');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BNazanin';
+  src: url('./assets/fonts/BNazaninBold.ttf') format('truetype'),
+       url('./assets/fonts/BNazaninBold.woff') format('woff'),
+       local('B Nazanin Bold'), local('BNazaninBd');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'B Titr';
+  src: url('./assets/fonts/BTitrBold.ttf') format('truetype'),
+       url('./assets/fonts/BTitrBold.woff2') format('woff2'),
+       local('B Titr'), local('BTitrBold');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'B Nazanin', 'BNazanin', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-latin: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Plus Jakarta Sans', 'B Nazanin', 'JetBrains Mono', monospace;
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  span,
+  div {
+    font-weight: 700;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    font-weight: 800;
+  }
+}
+
+.font-latin {
+  font-family: var(--font-latin);
+  font-weight: 700;
+}
+
+.font-mono-num {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Instructor banner now uses native transparent PNG Picture2_643ee570.png */
+.masked-instructor-banner {
+  /* Native PNG transparency preserved */
+}
+
+.masked-ip-shield {
+  -webkit-mask-image: url('./assets/extracted/mask_75.png');
+  mask-image: url('./assets/extracted/mask_75.png');
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-page {
+    page-break-after: always;
+    break-after: page;
+    width: 210mm !important;
+    min-height: 297mm !important;
+    max-height: 297mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    overflow: hidden !important;
+  }
+
+  .print-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
